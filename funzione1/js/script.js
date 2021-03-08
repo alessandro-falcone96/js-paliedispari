@@ -1,11 +1,13 @@
 // Creazione variabili
-do {
-  var parola = prompt("Inserisci una parola");
-} while (parola.trim() == "");
+
+var parola = "";
 var arr = parola.split("");
 var arrRev = [];
 var arrJoin = [];
 var result = false;
+do {
+  parola = prompt("Inserisci una parola");
+} while (parola.trim() == "");
 
 // Definisco la funzione
 function palindrome(parola) {
