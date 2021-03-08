@@ -1,32 +1,40 @@
 // Dichiaro le variabili
+var scelta = "";
+var risultato = "";
+var message = "";
+var numero = 0;
+var somma = 0;
+var numeroComputer = 0;
+
+// Chiedo i due input all'utente
 do {
-  var scelta = prompt("Pari o Dispari?");
+  scelta = prompt("Pari o Dispari?");
 } while ((scelta != "Pari") && (scelta != "Dispari"));
 
 do {
-  var numero = parseInt(prompt("Inserisci un numero tra 1 e 5: "));
+  numero = parseInt(prompt("Inserisci un numero tra 1 e 5: "));
 } while ((numero <= 0) || (numero > 5));
 
-var numeroComputer = Math.floor(Math.random() * 5) + 1;
-var somma = numero + numeroComputer;
+numeroComputer = Math.floor(Math.random() * 5) + 1;
+somma = numero + numeroComputer;
 
 // Creo la funzione somma
 function isPari(somma) {
   if ((somma % 2) == 0) {
-    var risultato = "Pari";
+    risultato = "Pari";
   } else {
-    var risultato = "Dispari";
+    risultato = "Dispari";
   }
   return risultato;
 }
-var risultato = isPari(somma);
+risultato = isPari(somma);
 
 // Creo la funzione alert message
 function alertMessage(risultato) {
   if (risultato == scelta) {
-    var message = alert("Complimenti, hai vinto!");
+    message = alert("Complimenti, hai vinto!");
   } else {
-    var message = alert("Mi dispiace, ha vinto il computer!");
+    message = alert("Mi dispiace, ha vinto il computer!");
   }
   return message;
 }
